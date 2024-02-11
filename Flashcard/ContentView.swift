@@ -13,17 +13,31 @@ struct ContentView: View {
     // Define the body property, required by View protocol
     // Return any object that conforms to the View protocol
     var body: some View {
-        // Vertical stack (VStack) to arrange views vertically
-        VStack {
-            // Image view with the system's globe icon
-            Image(systemName: "globe")
-                .imageScale(.large) // Set the image scale to large
-                .foregroundColor(.accentColor) // set the image color to the tint color
+        ZStack {
             
-            // Text view displaying the "Hello, world!" string
-            Text("Hello, world!")
+            // Card background
+            RoundedRectangle(cornerRadius: 25.0)
+                .fill(Color.blue.gradient)
+                .shadow(color: .black, radius: 4, x: -2, y: 2)
+            
+            VStack(spacing: 20) {
+                
+                // Card type (question vs answer)
+                Text("Question")
+                    .bold()
+                
+                // Separator (line)
+                Rectangle()
+                    .frame(height: 1)
+                
+                // Card text
+                Text("Located at the southern end of Puget Sound, what is the capital of Washington")
+            }
+            .font(.title)
+            .foregroundStyle(.white)
+            .padding()
         }
-        .padding() // Apply padding to the entire VStack
+        .frame(width: 300, height: 500)
     }
 }
 
