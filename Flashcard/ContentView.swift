@@ -10,34 +10,19 @@ import SwiftUI
 
 // Define the ContentView structure, which conforms to the View protocol
 struct ContentView: View {
+    // Add a @State property to store an array of card and initialize it with the mocked cards
+    @State private var cards: [Card] = Card.mockedCards
+    
     // Define the body property, required by View protocol
     // Return any object that conforms to the View protocol
     var body: some View {
+        // Create and iterate over the deck of cards
         ZStack {
-            
-            // Card background
-            RoundedRectangle(cornerRadius: 25.0)
-                .fill(Color.blue.gradient)
-                .shadow(color: .black, radius: 4, x: -2, y: 2)
-            
-            VStack(spacing: 20) {
-                
-                // Card type (question vs answer)
-                Text("Question")
-                    .bold()
-                
-                // Separator (line)
-                Rectangle()
-                    .frame(height: 1)
-                
-                // Card text
-                Text("Located at the southern end of Puget Sound, what is the capital of Washington")
+            ForEach(0..<cards.count, id: \.self) { index in
+                CardView(card: cards[index])
+                    .rotationEffect(.degrees(Double(cards.count - 1 - index) * -5))
             }
-            .font(.title)
-            .foregroundStyle(.white)
-            .padding()
         }
-        .frame(width: 300, height: 500)
     }
 }
 
