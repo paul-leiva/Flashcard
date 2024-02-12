@@ -12,6 +12,9 @@ import SwiftUI
 struct ContentView: View {
     @State private var deckId: Int = 0
     
+    // State property for creating a modal sheet to create a flashcard
+    @State private var createCardViewPresented = false
+    
     // Add a @State property to store an array of card and initialize it with the mocked cards
     @State private var cards: [Card] = Card.mockedCards
     
@@ -60,6 +63,17 @@ struct ContentView: View {
         }
         // .animation(.bouncy, value: cards) // (NOT WORKING)
         .id(deckId)
+        .sheet(isPresented: $createCardViewPresented, content: {
+            Text("Create cards here...")
+        })
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // Force the ZStack fram to expand as much as possible (the whole screen in this case)
+        .overlay(alignment: .topTrailing) { // Add an overlay modifier with trailing alignment for its contents
+            //Button("Add Flashcard", systemImage: "plus") { // Add button to add a flashcard // (NOT WORKING)
+            Button("Add Flashcard") { // Add button to add a flashcard
+                createCardViewPresented.toggle() // Toggle the createCardViewPresented value to trigger the sheet to show
+            }
+            .padding()
+        }
     }
 }
 
