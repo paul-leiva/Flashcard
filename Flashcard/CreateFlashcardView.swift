@@ -38,6 +38,7 @@ struct CreateFlashcardView: View {
             
             Spacer() // Spacer expands to fill empty space below TextFields and button, positioning them at the top
         }
+        .padding()
     }
 }
 
