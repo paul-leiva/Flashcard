@@ -12,6 +12,7 @@
 		C81001372B788AB5004D2C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81001362B788AB5004D2C25 /* Assets.xcassets */; };
 		C810013A2B788AB5004D2C25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81001392B788AB5004D2C25 /* Preview Assets.xcassets */; };
 		C81001412B78A0C4004D2C25 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81001402B78A0C4004D2C25 /* CardView.swift */; };
+		C81001432B79B2EC004D2C25 /* CreateFlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81001422B79B2EC004D2C25 /* CreateFlashcardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C81001362B788AB5004D2C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C81001392B788AB5004D2C25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C81001402B78A0C4004D2C25 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C81001422B79B2EC004D2C25 /* CreateFlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlashcardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				C81001322B788AAA004D2C25 /* FlashcardApp.swift */,
 				C81001342B788AAA004D2C25 /* ContentView.swift */,
+				C81001422B79B2EC004D2C25 /* CreateFlashcardView.swift */,
 				C81001402B78A0C4004D2C25 /* CardView.swift */,
 				C81001362B788AB5004D2C25 /* Assets.xcassets */,
 				C81001382B788AB5004D2C25 /* Preview Content */,
@@ -143,6 +146,7 @@
 				C81001352B788AAA004D2C25 /* ContentView.swift in Sources */,
 				C81001412B78A0C4004D2C25 /* CardView.swift in Sources */,
 				C81001332B788AAA004D2C25 /* FlashcardApp.swift in Sources */,
+				C81001432B79B2EC004D2C25 /* CreateFlashcardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -64,7 +64,10 @@ struct ContentView: View {
         // .animation(.bouncy, value: cards) // (NOT WORKING)
         .id(deckId)
         .sheet(isPresented: $createCardViewPresented, content: {
-            Text("Create cards here...")
+            //Text("Create cards here...")
+            CreateFlashcardView { card in
+                cards.append(card)
+            }
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity) // Force the ZStack fram to expand as much as possible (the whole screen in this case)
         .overlay(alignment: .topTrailing) { // Add an overlay modifier with trailing alignment for its contents
